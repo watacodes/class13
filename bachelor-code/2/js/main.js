@@ -1,25 +1,36 @@
-const andi = document.querySelector('#andi')
-const claire = document.querySelector('#claire')
-const sharleen = document.querySelector('#sharleen')
+const andi = document.getElementById('andiNext');
+const claire = document.getElementById('claireNext');
+const sharleen = document.getElementById('sharleenNext');
 
-document.querySelector('#andiNext').addEventListener('click', /*INSERTCODE*/)
-document.querySelector('#claireNext').addEventListener('click', /*INSERTCODE*/)
-document.querySelector('#sharleenNext').addEventListener('click', /*INSERTCODE*/)
+const pickAndi = document.getElementById('andi');
+const pickClaire = document.getElementById('claire');
+const pickSharleen = document.getElementById('sharleen');
 
-function andiNext(){
-	claire.classList.add(/*INSERTCODE*/)
-	sharleen.classList.add(/*INSERTCODE*/)
-	andi.classList.toggle(/*INSERTCODE*/)
-}
+andi.addEventListener('click', showAndi);
+claire.addEventListener('click', showClaire);
+sharleen.addEventListener('click', showSharleen);
 
-function claireNext(){
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.toggle(/*INSERTCODE*/)
-}
+function showAndi() {
+	pickClaire.classList.add('hidden');
+	pickSharleen.classList.add('hidden');
+	pickAndi.classList.toggle('hidden');
+	claire.style.display = 'none';
+	sharleen.style.display = 'none';
+};
 
-function sharleenNext(){
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.add(/*INSERTCODE*/)
-	/*INSERTCODE*/.classList.toggle(/*INSERTCODE*/)
-}
+function showClaire() {
+	pickAndi.classList.add('hidden');
+	pickSharleen.classList.add('hidden');
+	pickClaire.classList.toggle('hidden');
+	andi.style.display = 'none';
+	sharleen.style.display = 'none';
+};
+
+function showSharleen() {
+	pickClaire.classList.add('hidden');
+	pickAndi.classList.add('hidden');
+	pickSharleen.classList.toggle('hidden');
+	claire.style.display = 'none';
+	andi.style.display = 'none';
+};
+
