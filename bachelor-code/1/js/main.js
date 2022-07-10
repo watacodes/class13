@@ -1,6 +1,8 @@
-document.querySelector('#finalRose').addEventListener('click', /*INSERTCODE*/)
+let placeHolder = document.getElementById('placeHolder');
+document.getElementById('result-btn').addEventListener('click', hide);
 
-function hide(){
-	document.querySelector(/*INSERTCODE*/).style.display = 'none'
-	document.querySelector(/*INSERTCODE*/).style.display = 'none'
-}
+function hide() {
+	document.getElementById('claire').style.display = 'none';
+	document.getElementById('sharleen').style.display = 'none';
+	placeHolder.innerText = `Nikki won the Final Rose!`;
+};
