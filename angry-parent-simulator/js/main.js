@@ -1,32 +1,15 @@
-document.querySelector('#yell').addEventListener('click', run)
+const yellButton = document.getElementById('yell');
 
-function run() {
-  const fName = document.querySelector('#firstName').value
-  const fMidName = document.querySelector('#firstMiddle').value
-  const lMidName = document.querySelector('#lastMiddle').value
-  const lName = document.querySelector('#lastName').value
+yellButton.addEventListener('click', parentsYell);
 
-  // document.querySelector('#placeToYell').innerText = fName + ' ' + fMidName + ' ' + ' ' + lMidName + ' ' + lName
+function parentsYell() {
+  const firstName = document.getElementById('firstName').value;
+  const firstMiddle = document.getElementById('firstMiddle').value;
+  const lastMiddle = document.getElementById('lastMiddle').value;
+  const lastName = document.getElementById('lastName').value;
 
-  //Add what you should be doing - conditionals go here
+  let result = `${firstName} ${firstMiddle} ${lastMiddle} ${lastName}, You Messed Up!!! You are GROUNDED!!`;
 
-  document.querySelector('#placeToYell').innerText = `${fName} ${fMidName} ${lMidName} ${lName}`
+  const placeholder = document.getElementById('placeToYell');
+  placeholder.innerText = result;
 }
-
-// const synth = window.speechSynthesis;
-// document.querySelector('#yell').addEventListener('click', run)
-//
-// function run() {
-//   const fName = document.querySelector('#firstName').value
-//   const fMidName = document.querySelector('#firstMiddle').value
-//   const lMidName = document.querySelector('#lastMiddle').value
-//   const lName = document.querySelector('#lastName').value
-//
-//   const yellText =  `${fName} ${fMidName} ${lMidName} ${lName}`
-//
-//   document.querySelector('#placeToYell').innerText = yellText
-//
-//   let yellThis = new SpeechSynthesisUtterance(yellText);
-//
-//   synth.speak(yellThis);
-// }
