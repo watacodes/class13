@@ -1,17 +1,22 @@
-//Handle Capital Letters, Place result in DOM, add a check for humpday (Wed)
+// Handle Capital Letters, Place result in DOM, add a check for humpday (Wed)
+// Tuesday and Thursday = class day, Saturday and Sunday = weekend
 
-document.querySelector('#check').addEventListener('click', check)
+const placeholder = document.getElementById('placeToSee');
+const checkButton = document.getElementById('check');
+let daysOfTheWeek = document.getElementById('day');
 
-function check() {
+checkButton.addEventListener('click', checkDays);
 
-  const day = document.querySelector('#day').value
-
-  if(day === "tuesday" || day === "thursday"){
-    console.log("YOU HAVE CLASS")
-  }else if( day === "saturday" || day === "sunday"){
-    console.log("Its The Weekend")
-  }else{
-    console.log("BORING")
+function checkDays() {
+  let day = daysOfTheWeek.value.toLowerCase();
+  console.log(day);
+  if (day === "tuesday" || day === "thursday") {
+    placeholder.innerText = 'It\'s a class day!';
+  } else if (day === "saturday" || day === "sunday") {
+    placeholder.innerText = 'It\'s weekend, Yay!';
+  } else {
+    placeholder.innerText = 'It\'s just a day, boring!';
   }
-
 }
+
+
