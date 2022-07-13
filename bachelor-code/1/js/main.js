@@ -1,8 +1,13 @@
-let placeHolder = document.getElementById('placeHolder');
-document.getElementById('result-btn').addEventListener('click', hide);
+document.getElementById('result-btn').addEventListener('click', getResult);
 
-function hide() {
-	document.getElementById('claire').style.display = 'none';
-	document.getElementById('sharleen').style.display = 'none';
-	placeHolder.innerText = `Nikki won the Final Rose!`;
+const claire = document.getElementById('claire');
+const nikki = document.getElementById('nikki');
+const sharleen = document.getElementById('sharleen');
+const placeholder = document.getElementById('placeHolder');
+
+function getResult() {
+	claire.style.display = 'none';
+	sharleen.style.display = 'none';
+	placeholder.innerText = 'The winner is Nikki!';
 };
+
