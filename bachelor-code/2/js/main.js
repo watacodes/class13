@@ -1,36 +1,25 @@
-const andi = document.getElementById('andiNext');
-const claire = document.getElementById('claireNext');
-const sharleen = document.getElementById('sharleenNext');
+document.getElementById('andiNext').addEventListener('click', showAndi);
+document.getElementById('claireNext').addEventListener('click', showClaire);
+document.getElementById('sharleenNext').addEventListener('click', showSharleen);
 
-const pickAndi = document.getElementById('andi');
-const pickClaire = document.getElementById('claire');
-const pickSharleen = document.getElementById('sharleen');
-
-andi.addEventListener('click', showAndi);
-claire.addEventListener('click', showClaire);
-sharleen.addEventListener('click', showSharleen);
+const getAndi = document.getElementById('andi');
+const getClaire = document.getElementById('claire');
+const getSharleen = document.getElementById('sharleen');
 
 function showAndi() {
-	pickClaire.classList.add('hidden');
-	pickSharleen.classList.add('hidden');
-	pickAndi.classList.toggle('hidden');
-	claire.style.display = 'none';
-	sharleen.style.display = 'none';
-};
+	getAndi.classList.toggle('hidden');
+	getClaire.classList.add('hidden');
+	getSharleen.classList.add('hidden');
+}
 
 function showClaire() {
-	pickAndi.classList.add('hidden');
-	pickSharleen.classList.add('hidden');
-	pickClaire.classList.toggle('hidden');
-	andi.style.display = 'none';
-	sharleen.style.display = 'none';
-};
+	getClaire.classList.toggle('hidden');
+	getSharleen.classList.add('hidden');
+	getAndi.classList.add('hidden');
+}
 
 function showSharleen() {
-	pickClaire.classList.add('hidden');
-	pickAndi.classList.add('hidden');
-	pickSharleen.classList.toggle('hidden');
-	claire.style.display = 'none';
-	andi.style.display = 'none';
-};
-
+	getSharleen.classList.toggle('hidden');
+	getClaire.classList.add('hidden');
+	getAndi.classList.add('hidden');
+}
