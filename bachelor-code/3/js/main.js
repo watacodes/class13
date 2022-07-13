@@ -1,11 +1,12 @@
 const contestants = document.querySelectorAll('.contestant');
 
-Array.from(contestants).forEach(element => element.addEventListener('click', checkForRose));
+Array.from(contestants).forEach(e => e.addEventListener('click', rose));
 
-function checkForRose(click){
-	if(click.target.classList.contains('rose')) {
+function rose(elem) {
+	if (elem.target.classList.contains('rose')) {
 		document.querySelector('#nikki').classList.toggle('hidden');
 	} else {
-		alert("Wrong!");
+	return alert('Not her!');
 	}
-}
+};
+
